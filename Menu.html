@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="./css/main.css">
+    <script> 
+            var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+            content.style.maxHeight = null;
+            } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            } 
+        });
+        }
+    </script>
+</head>
+<header>
+    <nav>
+        <img src="./img/Logo.png" alt="Sushi in a shape of Totoro">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./AboutUs.html">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <h1>Menu</h1>
+
+    <button type="button" class="collapsible">Sushi Combination and Plates</button>
+    <div class="content">
+    <h2>Nigiri 6pcs & California or Spicy Tuna Roll $17</h2>
+    <h2>Nigiri 6pcs &  1 Special Roll $20</h2>
+    <h2>Vegetarian  Sushi $16</h2>
+        <p>Choose between Veggie Crunch or Futo Roll, and Choice of Two Veggie Rolls.</p>
+    <h2>3 Roll Combination $16</h2>
+        <p>2 Regular Roll + 1 Special Roll $19</p>
+        <p>1 Regular Roll + 2 Special Roll $21</p>
+    <h2>Sashimi Appetizer 6pcs $12</h2>
+        <p>Tuna, Salmon, Yellowtail</p>
+    <h2>Sashimi Combo 10pcs $22</h2>
+        <p>Chef's Special, and Sushi Rice</p>
+    <h2>Chirashi $21</h2>
+        <p>Bowl of rice mixed with fish</p>
+    <h2>Sushi & Entrée Combo $20</h2>
+        <p>1 Sushi from Sushi & 2 from Kitchen</p>
+    </div>
+
+    <button type="button" class="collapsible">Sushi Type 1</button>
+    <div class="content">
+    <p>Sushi rolls</p>
+    </div>
+
+    <footer>
+        <div>
+            <p>Hours:</p>
+            <p>Monday - Saturday:</p>
+            <p>11:30 AM - 2:30 PM</p>
+            <p>4:30 PM - 10:00 PM</p>
+        </div>
+        <div>
+           <p> Contact Us: (303) 766-0045</p>
+           <p>4243 S Buckley Rd, Aurora, CO 80013</p>
+        </div>
+    </footer>
+
+</body>
+</html>
